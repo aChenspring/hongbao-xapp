@@ -1,6 +1,8 @@
 App({
     appData: {
-        //
+        img: {
+            loading: '../../img/loading.svg'
+        }
     },
     alert: function (content, callback) {
         // callback is optional

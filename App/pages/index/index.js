@@ -3,8 +3,8 @@ let log = console.log.bind(console);
 
 Page({
     data: {
-        doneLoad: false,
-
+        img: app.appData.img,
+        doneLoad: true,
     },
     onLoad: function () {
         //

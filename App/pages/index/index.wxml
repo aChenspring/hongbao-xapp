@@ -1,13 +1,23 @@
 <block wx:if="{{doneLoad}}">
-    <view class="one"></view>
-    <view class="two"></view>
-    <view class="three"></view>
-    <view class="four"></view>
-    <view class="five"></view>
-    <view class="fix"></view>
+    <view class="s1">
+        <image mode="widthFix" src="../../img/1.png"></image>
+        <view>口令占位符</view>
+    </view>
+    <view class="s2">
+        <image mode="widthFix" src="../../img/2.png"></image>
+        <view class="one"></view>
+        <view class="two">还有20次尝试机会</view>
+        <view class="three">长按说出口令</view>
+    </view>
+    <view class="s3">
+        <image mode="widthFix" src="../../img/6.png"></image>
+    </view>
+    <view class="s4"></view>
+    <view class="s5"></view>
+    <view class="s6"></view>
 </block>
 <block wx:else>
     <view class="loading">
-        <img src="../../img/icon/loading.svg">
+        <image src="{{img.loading}}"></image>
     </view>
 </block>

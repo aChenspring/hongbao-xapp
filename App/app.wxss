@@ -1,14 +1,10 @@
-@border-test: .5px solid red;
-
 view {
   box-sizing: border-box;
 }
-
-page{
+page {
   background-color: #fff6d0;
   font-family: "Helvetica Neue", Arial, "微软雅黑", "Hiragino Sans GB", sans-serif;
 }
-
 .loading {
   position: fixed;
   width: 100%;
@@ -19,9 +15,8 @@ page{
   display: flex;
   justify-content: center;
   align-items: center;
-  //
-  image {
-    width: 20px;
-    height: 20px;
-  }
+}
+.loading image {
+  width: 20px;
+  height: 20px;
 }
