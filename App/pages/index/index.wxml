@@ -1,1 +1,13 @@
-<view>this is index</view>
+<block wx:if="{{doneLoad}}">
+    <view class="one"></view>
+    <view class="two"></view>
+    <view class="three"></view>
+    <view class="four"></view>
+    <view class="five"></view>
+    <view class="fix"></view>
+</block>
+<block wx:else>
+    <view class="loading">
+        <img src="../../img/icon/loading.svg">
+    </view>
+</block>
