@@ -1,5 +1,11 @@
 App({
     appData: {
+        api: {
+            visitorLogin: 'https://hb.shulailo.cn/index.php/home/index/login',
+            merchantDetail: 'https://hb.shulailo.cn/index.php/home/index/sell',
+            hongbaoDetail: 'https://hb.shulailo.cn/index.php/home/index/gift',
+            recordUpload: 'https://hb.shulailo.cn/index.php/home/index/voiceUpload',
+        },
         img: {
             loading: '../../img/loading.svg'
         }
