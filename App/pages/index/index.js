@@ -11,8 +11,6 @@ Page({
         let page = this;
         wx.login({
             success: function (res) {
-                log(res.code)
-                return;
                 app.post({
                     url: page.data.api.visitorLogin,
                     data: {
