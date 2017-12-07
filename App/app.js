@@ -4,7 +4,7 @@ App({
             visitorLogin: 'http://hb.shulailo.cn/index.php/home/index/login',
             getMerchantDetail: 'http://hb.shulailo.cn/index.php/home/index/sell',
             getHongbaoDetail: 'http://hb.shulailo.cn/index.php/home/index/gift',
-            recordUpload: 'http://hb.shulailo.cn/index.php/home/index/voiceUpload',
+            recordUpload: '',
         },
         img: {
             loading: '../../img/loading.svg'

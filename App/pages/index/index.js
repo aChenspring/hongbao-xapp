@@ -71,8 +71,12 @@ Page({
     record: function () {
         let page = this;
         let rm = wx.getRecorderManager();
-        let counter = 5;
+        let counter = 3;
+        page.setData({
+            recordButtonText: counter + 's'
+        });
         let interval = setInterval(function () {
+            counter -= 1;
             if (counter === 0) {
                 clearInterval(interval);
                 page.setData({
@@ -83,13 +87,32 @@ Page({
             page.setData({
                 recordButtonText: counter + 's'
             });
-            counter -= 1;
         }, 1000);
         rm.start({
-            duration: 5000
+            format: 'mp3',
+            duration: 3000
         });
-        rm.onStop = function (res) {
-            log(res);
-        }
+        rm.onStop((res) => {
+            wx.showModal({
+                title: '提示',
+                content: JSON.stringify(res),
+            });
+            let tmp = res.tempFilePath;
+            wx.uploadFile({
+                url: page.data.api.recordUpload,
+                filePath: tmp,
+                name: 'file',
+                formData: {
+                    'key': 'value'
+                },
+                success: function (res) {
+                    res = res.data;
+                    //
+                },
+                fail: function () {
+                    //
+                }
+            })
+        })
     }
 });
