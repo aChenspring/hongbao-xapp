@@ -43,6 +43,7 @@ Page({
             }
         });
 
+        // get merchant detail, with merchant id, then we get hongbao detail
         app.post({
             url: page.data.api.getMerchantDetail,
             success: function (res) {
@@ -58,6 +59,25 @@ Page({
                 if (res.code === 0) {
                     page.setData({
                         merchantDetail: res.data
+                    });
+                    // get hongbao detail
+                    app.post({
+                        url: page.data.api.getHongbaoDetail,
+                        data: {
+                            id: page.data.merchantDetail.id
+                        },
+                        success: function (res) {
+                            res = res.data;
+                            if (res.code === 0) {
+                                //
+                            }
+                            else {
+                                //
+                            }
+                        },
+                        fail: function () {
+                            //
+                        }
                     });
                 }
                 else {
