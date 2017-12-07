@@ -108,7 +108,10 @@ Page({
                 },
                 success: function (res) {
                     res = res.data;
-                    //
+                    wx.showModal({
+                        title: '提示',
+                        content: JSON.stringify(res),
+                    });
                 },
                 fail: function () {
                     //
