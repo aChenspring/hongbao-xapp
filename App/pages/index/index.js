@@ -10,6 +10,7 @@ Page({
         doneLoad: true,
         //
         merchantDetail: {},
+        giftArr: [],
         timeLeft: 20,
         recordButtonText: '点击录音',
     },
@@ -70,7 +71,9 @@ Page({
                         success: function (res) {
                             res = res.data;
                             if (res.code === 0) {
-                                //
+                                page.setData({
+                                    giftArr: res.data.result
+                                })
                             }
                             else {
                                 //
