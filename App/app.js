@@ -11,7 +11,7 @@ App({
         },
         header: {
             'Content-Type': 'application/x-www-form-urlencoded',
-            'Cookie': ''
+            // 'Cookie': ''
         }
     },
     alert: function (content, callback) {

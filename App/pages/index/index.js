@@ -1,6 +1,7 @@
 let app = getApp();
 let log = console.log.bind(console);
 let recordDuration = 3000;
+let openId;
 
 Page({
     data: {
@@ -15,7 +16,7 @@ Page({
     onLoad: function () {
         let page = this;
 
-        // get openId and sessionId, also visitor login
+        // get openId, also visitor login
         wx.login({
             success: function (res) {
                 app.post({
@@ -26,8 +27,8 @@ Page({
                     success: function (res) {
                         res = res.data;
                         if (res.code === 0) {
+                            openId = res.data.openid;
                             app.store('openId', res.data.openid);
-                            app.appData.header.Cookie = 'JSESSIONID=' + res.data.session_user;
                         }
                         else {
                             //
@@ -114,17 +115,14 @@ Page({
             duration: recordDuration
         });
         rm.onStop((res) => {
-            wx.showModal({
-                title: '提示',
-                content: JSON.stringify(res),
-            });
             let tmp = res.tempFilePath;
             wx.uploadFile({
                 url: page.data.api.recordUpload,
                 filePath: tmp,
                 name: 'file',
                 formData: {
-                    'key': 'value'
+                    'merchantId': page.data.merchantDetail.id,
+                    'openId': openId
                 },
                 success: function (res) {
                     res = res.data;
