@@ -1,13 +1,17 @@
 <block wx:if="{{doneLoad}}">
     <view class="s1">
         <image mode="widthFix" src="../../img/1.png"></image>
-        <view>口令占位符</view>
+        <view>{{merchantDetail.command}}</view>
     </view>
     <view class="s2">
         <image mode="widthFix" src="../../img/2.png"></image>
-        <view class="one"></view>
-        <view class="two">还有20次尝试机会</view>
-        <view class="three">长按说出口令</view>
+        <view class="one">{{merchantDetail.name}}</view>
+        <view class="two">还有{{timeLeft}}次尝试机会</view>
+        <view class="three" bindtap="record">{{recordButtonText}}</view>
+        <view class="four">
+            <image mode="aspectFill" src="{{merchantDetail.logo}}"></image>
+            <view class="address">{{merchantDetail.addr}}</view>
+        </view>
     </view>
     <view class="s3">
         <image mode="widthFix" src="../../img/6.png"></image>

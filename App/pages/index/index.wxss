@@ -41,6 +41,17 @@ page {
 .s2 image {
   width: 100%;
 }
+.s2 .one {
+  position: absolute;
+  width: 100%;
+  font-size: 16px;
+  line-height: 16px;
+  height: 16px;
+  top: 24%;
+  color: #5b3715;
+  text-align: center;
+  letter-spacing: 1px;
+}
 .s2 .two {
   position: absolute;
   width: 100%;
@@ -61,6 +72,26 @@ page {
   top: 56.9%;
   color: #fff961;
   text-align: center;
+}
+.s2 .four {
+  position: absolute;
+  width: 44%;
+  height: 13%;
+  left: 31.5%;
+  top: 2.5%;
+  display: flex;
+  justify-content: space-between;
+}
+.s2 .four image {
+  width: 30%;
+  height: 100%;
+}
+.s2 .four .address {
+  width: 90%;
+  height: 100%;
+  padding: 5px;
+  font-size: 12px;
+  line-height: 14px;
 }
 .s3 {
   margin-top: -30px;

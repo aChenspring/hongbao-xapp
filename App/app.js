@@ -2,12 +2,16 @@ App({
     appData: {
         api: {
             visitorLogin: 'http://hb.shulailo.cn/index.php/home/index/login',
-            merchantDetail: 'http://hb.shulailo.cn/index.php/home/index/sell',
-            hongbaoDetail: 'http://hb.shulailo.cn/index.php/home/index/gift',
+            getMerchantDetail: 'http://hb.shulailo.cn/index.php/home/index/sell',
+            getHongbaoDetail: 'http://hb.shulailo.cn/index.php/home/index/gift',
             recordUpload: 'http://hb.shulailo.cn/index.php/home/index/voiceUpload',
         },
         img: {
             loading: '../../img/loading.svg'
+        },
+        header: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+            'Cookie': ''
         }
     },
     alert: function (content, callback) {
@@ -36,14 +40,13 @@ App({
         });
     },
     get: function (obj) {
+        let page = this;
         let f = function () {
             //
         };
         wx.request({
             method: 'GET',
-            header: {
-                'Content-Type': 'application/x-www-form-urlencoded'
-            },
+            header: page.appData.header,
             url: obj.url,
             success: obj.success || f,
             fail: obj.fail || f,
@@ -51,14 +54,13 @@ App({
         });
     },
     post: function (obj) {
+        let page = this;
         let f = function () {
             //
         };
         wx.request({
             method: 'POST',
-            header: {
-                'Content-Type': 'application/x-www-form-urlencoded'
-            },
+            header: page.appData.header,
             url: obj.url,
             data: obj.data || {},
             success: obj.success || f,
@@ -89,5 +91,8 @@ App({
         wx.setNavigationBarTitle({
             title: s
         });
+    },
+    store: function (key, data) {
+        wx.setStorageSync(key, data);
     }
 });
