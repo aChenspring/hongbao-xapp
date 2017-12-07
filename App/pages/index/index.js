@@ -1,5 +1,6 @@
 let app = getApp();
 let log = console.log.bind(console);
+let recordDuration = 3000;
 
 Page({
     data: {
@@ -9,7 +10,7 @@ Page({
         //
         merchantDetail: {},
         timeLeft: 20,
-        recordButtonText: '点击录音'
+        recordButtonText: '点击录音',
     },
     onLoad: function () {
         let page = this;
@@ -71,7 +72,7 @@ Page({
     record: function () {
         let page = this;
         let rm = wx.getRecorderManager();
-        let counter = 3;
+        let counter = recordDuration / 1000;
         page.setData({
             recordButtonText: '剩余' + counter + '秒'
         });
@@ -90,7 +91,7 @@ Page({
         }, 1000);
         rm.start({
             format: 'mp3',
-            duration: 3000
+            duration: recordDuration
         });
         rm.onStop((res) => {
             wx.showModal({
