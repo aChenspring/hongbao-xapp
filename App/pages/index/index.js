@@ -73,7 +73,7 @@ Page({
         let rm = wx.getRecorderManager();
         let counter = 3;
         page.setData({
-            recordButtonText: counter + 's'
+            recordButtonText: '剩余' + counter + '秒'
         });
         let interval = setInterval(function () {
             counter -= 1;
@@ -85,7 +85,7 @@ Page({
                 return;
             }
             page.setData({
-                recordButtonText: counter + 's'
+                recordButtonText: '剩余' + counter + '秒'
             });
         }, 1000);
         rm.start({
