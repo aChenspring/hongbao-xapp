@@ -2,6 +2,8 @@ let app = getApp();
 let log = console.log.bind(console);
 let recordDuration = 3000;
 let openId;
+let isRecording;
+let recordManager;
 
 Page({
     data: {
@@ -12,7 +14,7 @@ Page({
         merchantDetail: {},
         giftArr: [],
         timeLeft: 20,
-        recordButtonText: '点击录音',
+        recordButtonText: '开始录音',
     },
     onLoad: function () {
         let page = this;
@@ -94,50 +96,43 @@ Page({
         });
     },
     record: function () {
-        let page = this;
-        let rm = wx.getRecorderManager();
-        let counter = recordDuration / 1000;
-        page.setData({
-            recordButtonText: '剩余' + counter + '秒'
-        });
-        let interval = setInterval(function () {
-            counter -= 1;
-            if (counter === 0) {
-                clearInterval(interval);
-                page.setData({
-                    recordButtonText: '点击录音'
-                });
-                return;
-            }
+        if (!isRecording) {
+            let page = this;
+            isRecording = true;
+            recordManager = wx.getRecorderManager();
             page.setData({
-                recordButtonText: '剩余' + counter + '秒'
+                recordButtonText: '结束录音'
             });
-        }, 1000);
-        rm.start({
-            format: 'mp3',
-            duration: recordDuration
-        });
-        rm.onStop((res) => {
-            let tmp = res.tempFilePath;
-            wx.uploadFile({
-                url: page.data.api.recordUpload,
-                filePath: tmp,
-                name: 'file',
-                formData: {
-                    'merchantId': page.data.merchantDetail.id,
-                    'openId': openId
-                },
-                success: function (res) {
-                    res = res.data;
-                    wx.showModal({
-                        title: '提示',
-                        content: JSON.stringify(res),
-                    });
-                },
-                fail: function () {
-                    //
-                }
+            recordManager.start({
+                format: 'mp3',
+                duration: recordDuration
+            });
+            recordManager.onStop((res) => {
+                isRecording = false;
+                page.setData({
+                    recordButtonText: '开始录音'
+                });
+                let tmp = res.tempFilePath;
+                wx.uploadFile({
+                    url: page.data.api.recordUpload,
+                    filePath: tmp,
+                    name: 'file',
+                    formData: {
+                        'merchantId': page.data.merchantDetail.id,
+                        'openId': openId
+                    },
+                    success: function (res) {
+                        res = res.data;
+                        wx.showModal({
+                            title: '提示',
+                            content: JSON.stringify(res),
+                        });
+                    },
+                    fail: function () {
+                        //
+                    }
+                })
             })
-        })
+        }
     }
 });

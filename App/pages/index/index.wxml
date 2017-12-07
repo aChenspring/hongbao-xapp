@@ -18,7 +18,7 @@
     </view>
     <view class="s4">
         <block wx:for="{{}}">
-            
+
         </block>
     </view>
     <view class="s5"></view>
