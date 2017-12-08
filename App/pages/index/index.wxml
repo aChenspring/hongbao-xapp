@@ -55,11 +55,11 @@
                 </view>
                 <view class="two">
                     <image mode="aspectFit" src="../../img/7.png"></image>
-                    <text></text>
+                    <text>{{item.length + 's'}}</text>
                     <image src="../../img/9.png"></image>
                 </view>
                 <view class="three">
-                    <view class="top">匹配度：{{item.match}}</view>
+                    <view class="top">匹配度: {{item.match}}</view>
                     <view class="down">
                         <text>获得</text>
                         <text>{{item.message}}</text>
@@ -67,6 +67,9 @@
                 </view>
             </view>
         </block>
+    </view>
+    <view class="s7">
+        <text>活动解释权归冠一阁禅茶文化中心所有</text>
     </view>
 </block>
 <block wx:else>

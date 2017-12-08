@@ -198,6 +198,14 @@ page {
   width: 100px;
   height: 40px;
 }
+.s6 .item .two text:nth-child(2) {
+  color: #444;
+  position: absolute;
+  font-size: 15px;
+  line-height: 50px;
+  top: 0;
+  left: 39px;
+}
 .s6 .item .two image:nth-child(3) {
   position: absolute;
   width: 20px;
@@ -215,8 +223,16 @@ page {
   color: white;
 }
 .s6 .item .three .down {
+  letter-spacing: 1px;
   color: white;
 }
 .s6 .item .three .down text:nth-child(2) {
   color: #FDED64;
+}
+.s7 {
+  background-color: #EB432B;
+  font-size: 13px;
+  text-align: center;
+  padding: 10px;
+  color: #F28D8B;
 }
