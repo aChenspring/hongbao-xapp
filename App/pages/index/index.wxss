@@ -123,13 +123,14 @@ page {
   width: 100%;
 }
 .s4 {
-  margin: 15px 0 0 5%;
+  margin-top: 15px;
   display: flex;
   flex-wrap: wrap;
 }
 .s4 .item {
   position: relative;
   width: 30%;
+  margin-left: 2.5%;
 }
 .s4 .item .bg {
   width: 100%;
