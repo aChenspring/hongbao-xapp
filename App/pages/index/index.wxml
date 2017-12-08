@@ -19,8 +19,23 @@
         <image mode="widthFix" src="../../img/6.png"></image>
     </view>
     <view class="s4">
-        <block wx:for="{{}}">
-
+        <block wx:for="{{giftArr}}">
+            <!--
+            gift_logo:"./public/20171202/sht.png"
+            gift_name:"现金红包"
+            gift_sug:"现金红包"
+            gift_type:"0"
+            id:"1"
+            shangjia_id:"1"
+            -->
+            <view class="item">
+                <image src="../../img/5.png" class="bg"></image>
+                <view class="one">
+                    <image src="{{item.gift_logo}}"></image>
+                </view>
+                <view class="two">{{giftTypeMap[item.gift_type]}}</view>
+                <view class="three">{{item.gift_name}}</view>
+            </view>
         </block>
     </view>
     <view class="s5"></view>

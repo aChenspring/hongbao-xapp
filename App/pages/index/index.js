@@ -10,6 +10,13 @@ Page({
         api: app.appData.api,
         img: app.appData.img,
         doneLoad: true,
+        giftTypeMap: {
+            "0": "现金",
+            "1": "代金券",
+            "2": "诚信蜜",
+            "3": "折扣",
+            "4": "实物",
+        },
         //
         merchantDetail: {},
         giftArr: [],
