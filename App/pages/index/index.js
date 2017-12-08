@@ -21,7 +21,9 @@ Page({
         giftArr: [],
         hongbaoRecordsArr: [],
         countDown: '',
-        isRecording: false
+        isRecording: false,
+        //
+        showIntro: false
     },
     onLoad: function () {
         let page = this;
@@ -145,6 +147,7 @@ Page({
             }
         });
     },
+    // record
     recordStart: function () {
         let page = this;
         if (!page.data.isRecording) {
@@ -206,5 +209,16 @@ Page({
             isRecording: false
         });
         recordManager.stop();
+    },
+    // intro
+    introShow: function () {
+        this.setData({
+            showIntro: true
+        });
+    },
+    introHide: function () {
+        this.setData({
+            showIntro: false
+        });
     }
 });

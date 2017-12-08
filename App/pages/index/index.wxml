@@ -12,7 +12,7 @@
             <image mode="aspectFill" src="{{merchantDetail.logo}}"></image>
             <view class="address">{{merchantDetail.addr}}</view>
         </view>
-        <view class="five"></view>
+        <view class="five" bindtap="introShow"></view>
         <view class="six"></view>
     </view>
     <view class="s3">
@@ -73,9 +73,15 @@
     </view>
     <block wx:if="{{isRecording}}">
         <view class="s8">
-            <image src="../../img/10.png"></image>
+            <image src="../../img/10.gif"></image>
             <text class="button" bindtap="recordStop">点击结束</text>
             <text class="countdown">{{countDown}}</text>
+        </view>
+    </block>
+    <block wx:if="{{showIntro}}">
+        <view class="s9">
+            <image mode="widthFix" src="../../img/11.png"></image>
+            <view bindtap="introHide"></view>
         </view>
     </block>
 </block>
