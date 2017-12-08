@@ -40,6 +40,28 @@ Page({
                         if (res.code === 0) {
                             openId = res.data.openid;
                             app.store('openId', res.data.openid);
+                            // get user info
+                            wx.getUserInfo({
+                                success: function (res) {
+                                    res = res.userInfo;
+                                    app.post({
+                                        url: page.data.api.setVisitorHeadUrl,
+                                        data: {
+                                            openId: openId,
+                                            headUrl: res.avatarUrl
+                                        },
+                                        success: function (res) {
+                                            // res = res.data;
+                                        },
+                                        fail: function () {
+                                            //
+                                        }
+                                    });
+                                },
+                                fail: function () {
+                                    //
+                                }
+                            });
                         }
                         else {
                             //
@@ -97,7 +119,7 @@ Page({
                     app.post({
                         url: page.data.api.getHongbaoRecords,
                         data: {
-                            id: page.data.merchantDetail.id
+                            merchantId: page.data.merchantDetail.id
                         },
                         success: function (res) {
                             res = res.data;
