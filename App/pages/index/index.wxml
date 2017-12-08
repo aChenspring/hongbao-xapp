@@ -12,6 +12,8 @@
             <image mode="aspectFill" src="{{merchantDetail.logo}}"></image>
             <view class="address">{{merchantDetail.addr}}</view>
         </view>
+        <view class="five"></view>
+        <view class="six"></view>
     </view>
     <view class="s3">
         <image mode="widthFix" src="../../img/6.png"></image>

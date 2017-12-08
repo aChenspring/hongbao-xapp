@@ -34,6 +34,7 @@ page {
   top: 62.6%;
   text-align: center;
   color: #fff961;
+  border: 0.5px solid red;
 }
 .s2 {
   position: relative;
@@ -51,6 +52,7 @@ page {
   color: #5b3715;
   text-align: center;
   letter-spacing: 1px;
+  border: 0.5px solid red;
 }
 .s2 .two {
   position: absolute;
@@ -62,6 +64,7 @@ page {
   color: #5b3715;
   text-align: center;
   letter-spacing: 1px;
+  border: 0.5px solid red;
 }
 .s2 .three {
   position: absolute;
@@ -72,6 +75,7 @@ page {
   top: 56.9%;
   color: #fff961;
   text-align: center;
+  border: 0.5px solid red;
 }
 .s2 .four {
   position: absolute;
@@ -79,6 +83,7 @@ page {
   height: 13%;
   left: 31.5%;
   top: 2.5%;
+  border: 0.5px solid red;
   display: flex;
   justify-content: space-between;
 }
@@ -92,6 +97,23 @@ page {
   padding: 5px;
   font-size: 12px;
   line-height: 14px;
+  border: 0.5px solid red;
+}
+.s2 .five {
+  position: absolute;
+  width: 14%;
+  height: 6%;
+  left: 30%;
+  top: 69.5%;
+  border: 0.5px solid red;
+}
+.s2 .six {
+  position: absolute;
+  width: 14%;
+  height: 6%;
+  left: 49%;
+  top: 69.5%;
+  border: 0.5px solid red;
 }
 .s3 {
   margin-top: -30px;
