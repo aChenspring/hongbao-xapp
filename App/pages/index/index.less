@@ -81,18 +81,18 @@
   }
   .five {
     position: absolute;
-    width:14%;
-    height:6%;
-    left:30%;
-    top:69.5%;
+    width: 14%;
+    height: 6%;
+    left: 30%;
+    top: 69.5%;
     border: @border-test;
   }
   .six {
     position: absolute;
-    width:14%;
-    height:6%;
-    left:49%;
-    top:69.5%;
+    width: 14%;
+    height: 6%;
+    left: 49%;
+    top: 69.5%;
     border: @border-test;
   }
 }
@@ -105,11 +105,46 @@
 }
 
 .s4 {
+  margin-left: 5%;
+  display: flex;
+  flex-wrap: wrap;
   .item {
+    position: relative;
     width: 30%;
     .bg {
       width: 100%;
-      height: 100%;
+    }
+    .one {
+      position: absolute;
+      width: 40%;
+      height: 27%;
+      border: @border-test;
+      left: 30%;
+      top: 8%;
+      image {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .two {
+      position: absolute;
+      width: 100%;
+      font-size: 14px;
+      line-height: 14px;
+      text-align: center;
+      top: 50%;
+      color: red;
+      border: @border-test;
+    }
+    .three {
+      position: absolute;
+      width: 100%;
+      font-size: 14px;
+      line-height: 14px;
+      text-align: center;
+      top: 73%;
+      color: #F7E5B7;
+      border: @border-test;
     }
   }
 }

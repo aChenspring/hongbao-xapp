@@ -29,7 +29,7 @@
             shangjia_id:"1"
             -->
             <view class="item">
-                <image src="../../img/5.png" class="bg"></image>
+                <image mode="widthFix" src="../../img/5.png" class="bg"></image>
                 <view class="one">
                     <image src="{{item.gift_logo}}"></image>
                 </view>
