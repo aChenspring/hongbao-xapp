@@ -41,7 +41,33 @@
     <view class="s5">
         <image mode="widthFix" src="../../img/4.png"></image>
     </view>
-    <view class="s6"></view>
+    <view class="s6">
+        <!--
+        head_url:"https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTIkO5ZkM3Gr0MBvdWRTqMvkK9j5QFDBNlYQuja6W8NqQu0RniazicZMyEUnEWr6qPv0pfAECL1CAIjg/0"
+        match:"50%"
+        message:"0.21元"
+        voice_url:"http://hb.shulailo.cn/upload/music/2017-12-07/5a28e9799d7aa.mp3"
+        -->
+        <block wx:for="{{hongbaoRecordsArr}}">
+            <view class="item">
+                <view class="one">
+                    <image src="{{item.head_url}}"></image>
+                </view>
+                <view class="two">
+                    <image mode="aspectFit" src="../../img/7.png"></image>
+                    <text></text>
+                    <image src="../../img/9.png"></image>
+                </view>
+                <view class="three">
+                    <view class="top">匹配度：{{item.match}}</view>
+                    <view class="down">
+                        <text>获得</text>
+                        <text>{{item.message}}</text>
+                    </view>
+                </view>
+            </view>
+        </block>
+    </view>
 </block>
 <block wx:else>
     <view class="loading">

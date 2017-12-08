@@ -177,3 +177,46 @@ page {
 .s6 {
   background-color: #EB432B;
 }
+.s6 .item {
+  padding: 10px 15px;
+  display: flex;
+  border-bottom: 1px solid #E43F2D;
+}
+.s6 .item .one image {
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+}
+.s6 .item .two {
+  position: relative;
+  height: 50px;
+  padding: 5px 10px;
+}
+.s6 .item .two image:nth-child(1) {
+  display: block;
+  width: 100px;
+  height: 40px;
+}
+.s6 .item .two image:nth-child(3) {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 15px;
+  right: 25px;
+}
+.s6 .item .three {
+  width: 90%;
+  text-align: right;
+  font-size: 14px;
+  line-height: 25px;
+}
+.s6 .item .three .top {
+  color: white;
+}
+.s6 .item .three .down {
+  color: white;
+}
+.s6 .item .three .down text:nth-child(2) {
+  color: #FDED64;
+}
