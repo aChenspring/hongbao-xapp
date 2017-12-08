@@ -174,6 +174,8 @@ Page({
             }, 1000);
             recordManager.start({
                 format: 'mp3',
+                sampleRate: 16000,
+                numberOfChannels: 1,
                 duration: recordDuration
             });
             recordManager.onStop((res) => {
