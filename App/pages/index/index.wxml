@@ -38,7 +38,9 @@
             </view>
         </block>
     </view>
-    <view class="s5"></view>
+    <view class="s5">
+        <image mode="widthFix" src="../../img/4.png"></image>
+    </view>
     <view class="s6"></view>
 </block>
 <block wx:else>

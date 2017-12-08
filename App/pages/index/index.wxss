@@ -119,10 +119,11 @@ page {
   margin-top: -30px;
 }
 .s3 image {
+  display: block;
   width: 100%;
 }
 .s4 {
-  margin-left: 5%;
+  margin: 15px 0 0 5%;
   display: flex;
   flex-wrap: wrap;
 }
@@ -136,10 +137,10 @@ page {
 .s4 .item .one {
   position: absolute;
   width: 40%;
-  height: 27%;
+  height: 33%;
   border: 0.5px solid red;
   left: 30%;
-  top: 8%;
+  top: 9%;
 }
 .s4 .item .one image {
   width: 100%;
@@ -164,4 +165,11 @@ page {
   top: 73%;
   color: #F7E5B7;
   border: 0.5px solid red;
+}
+.s5 {
+  margin-top: -10px;
+}
+.s5 image {
+  display: block;
+  width: 100%;
 }
