@@ -20,6 +20,7 @@ Page({
         //
         merchantDetail: {},
         giftArr: [],
+        hongbaoRecordsArr: [],
         timeLeft: 20,
         recordButtonText: '开始录音',
     },
@@ -54,7 +55,7 @@ Page({
             }
         });
 
-        // get merchant detail, with merchant id, then we get hongbao detail
+        // get merchant detail, with merchant id, then we get hongbao detail and hongbao records
         app.post({
             url: page.data.api.getMerchantDetail,
             success: function (res) {
@@ -82,6 +83,27 @@ Page({
                             if (res.code === 0) {
                                 page.setData({
                                     giftArr: res.data.result
+                                })
+                            }
+                            else {
+                                //
+                            }
+                        },
+                        fail: function () {
+                            //
+                        }
+                    });
+                    // get hongbao records
+                    app.post({
+                        url: page.data.api.getHongbaoRecords,
+                        data: {
+                            id: page.data.merchantDetail.id
+                        },
+                        success: function (res) {
+                            res = res.data;
+                            if (res.code === 0) {
+                                page.setData({
+                                    hongbaoRecordsArr: res.data.result
                                 })
                             }
                             else {
