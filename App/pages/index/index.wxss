@@ -173,3 +173,6 @@ page {
   display: block;
   width: 100%;
 }
+.s6 {
+  background-color: #EB432B;
+}
