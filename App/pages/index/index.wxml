@@ -7,7 +7,7 @@
         <image mode="widthFix" src="../../img/2.png"></image>
         <view class="one">{{merchantDetail.name}}</view>
         <view class="two">还有{{timeLeft}}次尝试机会</view>
-        <view class="three" bindtap="record">{{recordButtonText}}</view>
+        <view class="three" bindtap="recordStart">开始录音</view>
         <view class="four">
             <image mode="aspectFill" src="{{merchantDetail.logo}}"></image>
             <view class="address">{{merchantDetail.addr}}</view>
@@ -71,6 +71,13 @@
     <view class="s7">
         <text>活动解释权归冠一阁禅茶文化中心所有</text>
     </view>
+    <block wx:if="{{isRecording}}">
+        <view class="s8">
+            <image src="../../img/10.png"></image>
+            <text class="button" bindtap="recordStop">点击结束</text>
+            <text class="countdown">{{countDown}}</text>
+        </view>
+    </block>
 </block>
 <block wx:else>
     <view class="loading">

@@ -1,8 +1,7 @@
 let app = getApp();
 let log = console.log.bind(console);
-let recordDuration = 3000;
+let recordDuration = 15000;
 let openId;
-let isRecording;
 let recordManager;
 
 Page({
@@ -21,8 +20,8 @@ Page({
         merchantDetail: {},
         giftArr: [],
         hongbaoRecordsArr: [],
-        timeLeft: 20,
-        recordButtonText: '开始录音',
+        countDown: '',
+        isRecording: false
     },
     onLoad: function () {
         let page = this;
@@ -146,23 +145,39 @@ Page({
             }
         });
     },
-    record: function () {
-        if (!isRecording) {
+    recordStart: function () {
+        let page = this;
+        if (!page.data.isRecording) {
             let page = this;
-            isRecording = true;
             recordManager = wx.getRecorderManager();
+            let counter = recordDuration / 1000;
             page.setData({
-                recordButtonText: '结束录音'
+                isRecording: true,
+                countDown: '剩余' + counter + 's'
             });
+            let interval = setInterval(function () {
+                counter -= 1;
+                if (counter === 0) {
+                    clearInterval(interval);
+                    page.setData({
+                        isRecording: false
+                    });
+                    recordManager.stop();
+                    return;
+                }
+                page.setData({
+                    countDown: '剩余' + counter + 's'
+                });
+            }, 1000);
             recordManager.start({
                 format: 'mp3',
                 duration: recordDuration
             });
             recordManager.onStop((res) => {
-                isRecording = false;
                 page.setData({
-                    recordButtonText: '开始录音'
+                    isRecording: false
                 });
+                clearInterval(interval);
                 let tmp = res.tempFilePath;
                 wx.uploadFile({
                     url: page.data.api.recordUpload,
@@ -185,5 +200,11 @@ Page({
                 })
             })
         }
+    },
+    recordStop: function () {
+        this.setData({
+            isRecording: false
+        });
+        recordManager.stop();
     }
 });
