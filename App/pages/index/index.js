@@ -271,8 +271,9 @@ Page({
             success: function (res) {
                 res = res.data;
                 if (res.code === 0) {
-                    this.setData({
-                        myWinsArr: res.data.result
+                    page.setData({
+                        myWinsArr: res.data.result,
+                        showMyWins: true
                     })
                 }
                 else {

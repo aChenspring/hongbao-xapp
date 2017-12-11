@@ -20,6 +20,11 @@ page {
   width: 20px;
   height: 20px;
 }
+.ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 .s1 {
   position: relative;
 }
@@ -501,14 +506,35 @@ page {
   width: 60px;
   height: 60px;
   display: block;
+  border: 0.5px solid red;
 }
 .s12 .inner .innerInner .row .right {
   width: 90%;
+  padding-left: 10px;
+  border: 0.5px solid red;
+}
+.s12 .inner .innerInner .row .right .one {
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 20px;
 }
 .s12 .inner .innerInner .row .right .two {
   color: #FF3C25;
+  font-size: 14px;
+  line-height: 16px;
+  margin-top: 4px;
 }
 .s12 .inner .innerInner .row .right .three {
+  display: flex;
+  justify-content: space-between;
+  line-height: 16px;
+  margin-top: 4px;
+}
+.s12 .inner .innerInner .row .right .three text:nth-child(1) {
   color: #ccc;
+  font-size: 14px;
+}
+.s12 .inner .innerInner .row .right .three text:nth-child(2) {
+  color: #757575;
   font-size: 14px;
 }

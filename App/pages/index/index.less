@@ -494,19 +494,43 @@
             width: 60px;
             height: 60px;
             display: block;
+            border: @border-test;
           }
         }
         .right {
           width: 90%;
+          padding-left: 10px;
+          border: @border-test;
           .one {
-
+            font-size: 15px;
+            font-weight: bold;
+            line-height: 20px;
           }
           .two {
             color: #FF3C25;
+            font-size: 14px;
+            line-height: 16px;
+            margin-top: 4px;
           }
           .three {
-            color: #ccc;
-            font-size: 14px;
+            display: flex;
+            justify-content: space-between;
+            line-height: 16px;
+            margin-top: 4px;
+            text:nth-child(1) {
+              color: #ccc;
+              font-size: 14px;
+            }
+            text:nth-child(2) {
+              //position: absolute;
+              //right: 5px;
+              //bottom: 2px;
+              //padding: 2px 3px;
+              //border: 1px solid #D2D2D2;
+              //border-radius: 2px;
+              color: #757575;
+              font-size: 14px;
+            }
           }
         }
       }
