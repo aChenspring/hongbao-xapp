@@ -27,7 +27,8 @@ Page({
         //
         showIntro: false,
         showWinning: false,
-        showMyWins: true,
+        showMyWins: false,
+        myWinsArr: [],
         //
         headUrl: '',
         winningInfo: {
@@ -254,5 +255,33 @@ Page({
         this.setData({
             showWinning: false
         })
+    },
+    closeMyWins: function () {
+        this.setData({
+            showMyWins: false
+        })
+    },
+    showMyWins: function () {
+        let page = this;
+        app.post({
+            url: this.data.api.getMyWins,
+            data: {
+                openId: openId
+            },
+            success: function (res) {
+                res = res.data;
+                if (res.code === 0) {
+                    this.setData({
+                        myWinsArr: res.data.result
+                    })
+                }
+                else {
+                    //
+                }
+            },
+            fail: function () {
+                //
+            }
+        });
     }
 });

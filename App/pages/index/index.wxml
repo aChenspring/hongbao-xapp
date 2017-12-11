@@ -13,7 +13,7 @@
             <view class="address">{{merchantDetail.addr}}</view>
         </view>
         <view class="five" bindtap="introShow"></view>
-        <view class="six"></view>
+        <view class="six" bindtap="showMyWins"></view>
     </view>
     <view class="s3">
         <image mode="widthFix" src="../../img/6.png"></image>
@@ -128,10 +128,21 @@
         <view class="s12">
             <view class="inner">
                 <image mode="widthFix" src="../../img/17.png" class="bg"></image>
-                <view class="close"></view>
-                <view class="confirm"></view>
+                <view class="close" bindtap="closeMyWins"></view>
+                <view class="confirm" bindtap="closeMyWins"></view>
                 <view class="innerInner">
-
+                    <block wx:for="{{myWinsArr}}">
+                        <view class="row">
+                            <view class="left">
+                                <image src="{{item.img_url}}"></image>
+                            </view>
+                            <view class="right">
+                                <view class="one">{{item.business_name}}</view>
+                                <view class="two">{{item.message}}</view>
+                                <view class="three">{{item.time}}</view>
+                            </view>
+                        </view>
+                    </block>
                 </view>
             </view>
         </view>

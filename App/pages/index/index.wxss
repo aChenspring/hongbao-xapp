@@ -492,3 +492,23 @@ page {
   top: 34%;
   border: 0.5px solid red;
 }
+.s12 .inner .innerInner .row {
+  padding: 10px;
+  border-bottom: 1px solid #f5f5f5;
+  display: flex;
+}
+.s12 .inner .innerInner .row .left image {
+  width: 60px;
+  height: 60px;
+  display: block;
+}
+.s12 .inner .innerInner .row .right {
+  width: 90%;
+}
+.s12 .inner .innerInner .row .right .two {
+  color: #FF3C25;
+}
+.s12 .inner .innerInner .row .right .three {
+  color: #ccc;
+  font-size: 14px;
+}
