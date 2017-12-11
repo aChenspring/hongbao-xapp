@@ -247,5 +247,11 @@ Page({
         this.setData({
             showIntro: false
         });
+    },
+    // winning
+    closeWinning: function () {
+        this.setData({
+            showWinning: false
+        })
     }
 });

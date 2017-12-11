@@ -118,9 +118,9 @@
                 <view class="six">
                     还有{{timeLeft}}次尝试机会
                 </view>
-                <view class="seven"></view>
-                <view class="eight"></view>
-                <view class="nine"></view>
+                <view class="seven" bindtap="closeWinning"></view>
+                <view class="eight" bindtap="closeWinning"></view>
+                <view class="nine" bindtap="share"></view>
             </view>
         </view>
     </block>
