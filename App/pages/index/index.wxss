@@ -332,10 +332,10 @@ page {
   width: 100%;
 }
 .s11 .inner .one {
-  position: fixed;
+  position: absolute;
   width: 100%;
   left: 0;
-  top: 20%;
+  top: 18%;
   border: 0.5px solid red;
   display: flex;
   justify-content: center;
@@ -372,19 +372,19 @@ page {
   top: 15px;
 }
 .s11 .inner .two {
-  position: fixed;
+  position: absolute;
   width: 100%;
   left: 0;
-  top: 30%;
+  top: 31%;
   border: 0.5px solid red;
   text-align: center;
   font-size: 14px;
 }
 .s11 .inner .three {
-  position: fixed;
+  position: absolute;
   width: 100%;
   left: 0;
-  top: 35%;
+  top: 37%;
   border: 0.5px solid red;
   text-align: center;
   font-size: 14px;
@@ -398,10 +398,10 @@ page {
   letter-spacing: 1px;
 }
 .s11 .inner .four {
-  position: fixed;
+  position: absolute;
   width: 100%;
   left: 0;
-  top: 47%;
+  top: 49.5%;
   border: 0.5px solid red;
   display: flex;
   justify-content: center;
@@ -410,11 +410,44 @@ page {
   width: 13%;
 }
 .s11 .inner .five {
-  position: fixed;
+  position: absolute;
+  width: 100%;
+  color: white;
+  font-size: 14px;
+  text-align: center;
+  left: 0;
+  top: 67.5%;
 }
 .s11 .inner .six {
-  position: fixed;
+  position: absolute;
+  width: 100%;
+  color: #FBBEA0;
+  font-size: 14px;
+  text-align: center;
+  left: 0;
+  top: 78.5%;
 }
 .s11 .inner .seven {
-  position: fixed;
+  position: absolute;
+  width: 15%;
+  height: 10%;
+  right: 0;
+  top: 0;
+  border: 0.5px solid red;
+}
+.s11 .inner .eight {
+  position: absolute;
+  width: 25%;
+  height: 10%;
+  left: 0;
+  bottom: 10%;
+  border: 0.5px solid red;
+}
+.s11 .inner .nine {
+  position: absolute;
+  width: 25%;
+  height: 10%;
+  right: 0;
+  bottom: 10%;
+  border: 0.5px solid red;
 }

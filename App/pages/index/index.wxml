@@ -112,9 +112,15 @@
                 <view class="four">
                     <image mode="widthFix" src="{{winningInfo.img_url}}"></image>
                 </view>
-                <view class="five"></view>
-                <view class="six"></view>
+                <view class="five">
+                    获得“{{winningInfo.company}}” {{winningInfo.message}}
+                </view>
+                <view class="six">
+                    还有{{timeLeft}}次尝试机会
+                </view>
                 <view class="seven"></view>
+                <view class="eight"></view>
+                <view class="nine"></view>
             </view>
         </view>
     </block>

@@ -16,6 +16,7 @@ Page({
             "3": "折", // 折扣
             "4": "礼", // 实物
         },
+        timeLeft: 16,
         //
         merchantDetail: {},
         giftArr: [],
