@@ -99,7 +99,7 @@
                     </view>
                     <view class="right">
                         <image mode="" src="../../img/15.png"></image>
-                        <text>100s</text>
+                        <text>{{winningInfo.voice_time}}</text>
                         <image src="../../img/16.png"></image>
                     </view>
                 </view>
@@ -107,9 +107,11 @@
                     语音口令: {{merchantDetail.command}}
                 </view>
                 <view class="three">
-                    <text>匹配度: 90%</text>
+                    <text>匹配度: {{winningInfo.match}}%</text>
                 </view>
-                <view class="four"></view>
+                <view class="four">
+                    <image mode="widthFix" src="{{winningInfo.img_url}}"></image>
+                </view>
                 <view class="five"></view>
                 <view class="six"></view>
                 <view class="seven"></view>

@@ -399,6 +399,15 @@ page {
 }
 .s11 .inner .four {
   position: fixed;
+  width: 100%;
+  left: 0;
+  top: 47%;
+  border: 0.5px solid red;
+  display: flex;
+  justify-content: center;
+}
+.s11 .inner .four image {
+  width: 13%;
 }
 .s11 .inner .five {
   position: fixed;

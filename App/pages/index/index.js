@@ -27,7 +27,15 @@ Page({
         showIntro: false,
         showWinning: true,
         //
-        headUrl: ''
+        headUrl: '',
+        winningInfo: {
+            img_url: 'https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTIkO5ZkM3Gr0MBvdWRTqMvkK9j5QFDBNlYQuja6W8NqQu0RniazicZMyEUnEWr6qPv0pfAECL1CAIjg/0',
+            company: '冠一阁禅茶文化中心',
+            match: 50,
+            message: 'apple watch',
+            voice_time: 7,
+            voice_url: ''
+        }
     },
     onLoad: function () {
         let page = this;
@@ -205,6 +213,9 @@ Page({
                         wx.showModal({
                             title: '提示',
                             content: JSON.stringify(res),
+                        });
+                        page.setData({
+                            winningInfo: res.data
                         });
                     },
                     fail: function () {
