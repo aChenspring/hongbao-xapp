@@ -98,13 +98,17 @@
                         <image src="{{headUrl}}"></image>
                     </view>
                     <view class="right">
-                        <image src="../../15.png"></image>
+                        <image mode="" src="../../img/15.png"></image>
                         <text>100s</text>
-                        <image src="9.png"></image>
+                        <image src="../../img/16.png"></image>
                     </view>
                 </view>
-                <view class="two"></view>
-                <view class="three"></view>
+                <view class="two">
+                    语音口令: {{merchantDetail.command}}
+                </view>
+                <view class="three">
+                    <text>匹配度: 90%</text>
+                </view>
                 <view class="four"></view>
                 <view class="five"></view>
                 <view class="six"></view>

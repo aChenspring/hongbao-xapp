@@ -323,24 +323,35 @@
     }
     .one {
       position: fixed;
-      width: 50%;
-      left: 25%;
+      width: 100%;
+      left: 0;
       top: 20%;
       border: @border-test;
       display: flex;
+      justify-content: center;
       .left {
         image {
-          width: 60px;
-          height: 60px;
+          width: 50px;
+          height: 50px;
+          border-radius: 100%;
           display: block;
         }
       }
       .right {
         position: relative;
+        width: 100px;
+        margin-left: 10px;
         image:nth-child(1) {
-          height: 60px;
+          width: 100%;
+          height: 50px;
+          display: block;
         }
         text:nth-child(2) {
+          position: absolute;
+          top: 0;
+          left: 30px;
+          font-size: 14px;
+          line-height: 50px;
           color: white;
         }
         image:nth-child(3) {
@@ -348,15 +359,35 @@
           width: 20px;
           height: 20px;
           right: 10px;
-          top: 20px;
+          top: 15px;
         }
       }
     }
     .two {
       position: fixed;
+      width: 100%;
+      left: 0;
+      top: 30%;
+      border: @border-test;
+      text-align: center;
+      font-size: 14px;
     }
     .three {
       position: fixed;
+      width: 100%;
+      left: 0;
+      top: 35%;
+      border: @border-test;
+      text-align: center;
+      font-size: 14px;
+      text{
+        border: 1px dotted #FF665E;
+        display: inline;
+        padding: 5px 10px;
+        border-radius: 2px;
+        color: #FF665E;
+        letter-spacing: 1px;
+      }
     }
     .four {
       position: fixed;

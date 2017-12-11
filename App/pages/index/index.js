@@ -25,7 +25,7 @@ Page({
         isProcessing: false,
         //
         showIntro: false,
-        showWinning: false,
+        showWinning: true,
         //
         headUrl: ''
     },
