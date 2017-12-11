@@ -314,3 +314,67 @@ page {
   margin-left: -50px;
   margin-top: -90px;
 }
+.s11 {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.s11 .inner {
+  position: fixed;
+  width: 90%;
+  left: 5%;
+  top: 5%;
+}
+.s11 .inner image {
+  width: 100%;
+}
+.s11 .inner .one {
+  position: fixed;
+  width: 50%;
+  left: 25%;
+  top: 20%;
+  border: 0.5px solid red;
+  display: flex;
+}
+.s11 .inner .one .left image {
+  width: 60px;
+  height: 60px;
+  display: block;
+}
+.s11 .inner .one .right {
+  position: relative;
+}
+.s11 .inner .one .right image:nth-child(1) {
+  height: 60px;
+}
+.s11 .inner .one .right text:nth-child(2) {
+  color: white;
+}
+.s11 .inner .one .right image:nth-child(3) {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: 10px;
+  top: 20px;
+}
+.s11 .inner .two {
+  position: fixed;
+}
+.s11 .inner .three {
+  position: fixed;
+}
+.s11 .inner .four {
+  position: fixed;
+}
+.s11 .inner .five {
+  position: fixed;
+}
+.s11 .inner .six {
+  position: fixed;
+}
+.s11 .inner .seven {
+  position: fixed;
+}

@@ -305,3 +305,70 @@
     margin-top: -90px;
   }
 }
+
+.s11 {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, .5);
+  .inner {
+    position: fixed;
+    width: 90%;
+    left: 5%;
+    top: 5%;
+    image {
+      width: 100%;
+    }
+    .one {
+      position: fixed;
+      width: 50%;
+      left: 25%;
+      top: 20%;
+      border: @border-test;
+      display: flex;
+      .left {
+        image {
+          width: 60px;
+          height: 60px;
+          display: block;
+        }
+      }
+      .right {
+        position: relative;
+        image:nth-child(1) {
+          height: 60px;
+        }
+        text:nth-child(2) {
+          color: white;
+        }
+        image:nth-child(3) {
+          position: absolute;
+          width: 20px;
+          height: 20px;
+          right: 10px;
+          top: 20px;
+        }
+      }
+    }
+    .two {
+      position: fixed;
+    }
+    .three {
+      position: fixed;
+    }
+    .four {
+      position: fixed;
+    }
+    .five {
+      position: fixed;
+    }
+    .six {
+      position: fixed;
+    }
+    .seven {
+      position: fixed;
+    }
+  }
+}

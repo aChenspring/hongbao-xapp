@@ -24,7 +24,10 @@ Page({
         isRecording: false,
         isProcessing: false,
         //
-        showIntro: false
+        showIntro: false,
+        showWinning: false,
+        //
+        headUrl: ''
     },
     onLoad: function () {
         let page = this;
@@ -46,6 +49,9 @@ Page({
                             wx.getUserInfo({
                                 success: function (res) {
                                     res = res.userInfo;
+                                    page.setData({
+                                        headUrl: res.avatarUrl
+                                    });
                                     app.post({
                                         url: page.data.api.setVisitorHeadUrl,
                                         data: {
