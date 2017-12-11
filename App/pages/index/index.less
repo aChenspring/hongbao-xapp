@@ -380,7 +380,7 @@
       border: @border-test;
       text-align: center;
       font-size: 14px;
-      text{
+      text {
         border: 1px dotted #FF665E;
         display: inline;
         padding: 5px 10px;
@@ -442,6 +442,48 @@
       height: 10%;
       right: 3%;
       bottom: 3%;
+      border: @border-test;
+    }
+  }
+}
+
+.s12 {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, .5);
+  .inner {
+    position: absolute;
+    width: 90%;
+    left: 5%;
+    top: 5%;
+    .bg {
+      width: 100%;
+    }
+    .close {
+      position: absolute;
+      width: 20%;
+      height: 12%;
+      right: 0;
+      top: 0;
+      border: @border-test;
+    }
+    .confirm {
+      position: absolute;
+      width: 45%;
+      height: 9.5%;
+      left: 28%;
+      bottom: 5.5%;
+      border: @border-test;
+    }
+    .innerInner {
+      position: absolute;
+      width: 89%;
+      height: 45%;
+      left: 5%;
+      top: 34%;
       border: @border-test;
     }
   }

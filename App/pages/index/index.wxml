@@ -124,6 +124,18 @@
             </view>
         </view>
     </block>
+    <block wx:if="{{showMyWins}}">
+        <view class="s12">
+            <view class="inner">
+                <image mode="widthFix" src="../../img/17.png" class="bg"></image>
+                <view class="close"></view>
+                <view class="confirm"></view>
+                <view class="innerInner">
+
+                </view>
+            </view>
+        </view>
+    </block>
 </block>
 <block wx:else>
     <view class="loading">
