@@ -22,6 +22,7 @@ Page({
         hongbaoRecordsArr: [],
         countDown: '',
         isRecording: false,
+        isProcessing: false,
         //
         showIntro: false
     },
@@ -180,7 +181,8 @@ Page({
             });
             recordManager.onStop((res) => {
                 page.setData({
-                    isRecording: false
+                    isRecording: false,
+                    isProcessing: true
                 });
                 clearInterval(interval);
                 let tmp = res.tempFilePath;
@@ -201,6 +203,11 @@ Page({
                     },
                     fail: function () {
                         //
+                    },
+                    complete: function () {
+                        page.setData({
+                            isProcessing: false
+                        })
                     }
                 })
             })

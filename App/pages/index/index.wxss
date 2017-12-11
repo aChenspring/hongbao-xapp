@@ -252,7 +252,6 @@ page {
   top: 50%;
   margin-left: -45px;
   margin-top: -90px;
-  text-align: center;
 }
 .s8 text.countdown {
   position: absolute;
@@ -297,4 +296,21 @@ page {
   right: 0;
   top: 0;
   border: 0.5px solid red;
+}
+.s10 {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.s10 image {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  left: 50%;
+  top: 50%;
+  margin-left: -45px;
+  margin-top: -90px;
 }

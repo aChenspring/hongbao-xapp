@@ -84,6 +84,11 @@
             <view bindtap="introHide"></view>
         </view>
     </block>
+    <block wx:if="{{isProcessing}}">
+        <view class="s10">
+            <image src="../../img/12.png"></image>
+        </view>
+    </block>
 </block>
 <block wx:else>
     <view class="loading">
