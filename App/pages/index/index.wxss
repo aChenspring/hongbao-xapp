@@ -437,17 +437,17 @@ page {
 }
 .s11 .inner .eight {
   position: absolute;
-  width: 25%;
+  width: 42%;
   height: 10%;
-  left: 0;
-  bottom: 10%;
+  left: 3%;
+  bottom: 3%;
   border: 0.5px solid red;
 }
 .s11 .inner .nine {
   position: absolute;
-  width: 25%;
+  width: 42%;
   height: 10%;
-  right: 0;
-  bottom: 10%;
+  right: 3%;
+  bottom: 3%;
   border: 0.5px solid red;
 }
