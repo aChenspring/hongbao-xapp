@@ -99,7 +99,7 @@
                     </view>
                     <view class="right">
                         <image mode="" src="../../img/15.png"></image>
-                        <text>{{winningInfo.voice_time}}</text>
+                        <text>{{winningInfo.voice_time}}s</text>
                         <image src="../../img/16.png"></image>
                     </view>
                 </view>
