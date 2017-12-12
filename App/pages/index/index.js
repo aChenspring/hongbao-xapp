@@ -168,70 +168,74 @@ Page({
     // record
     recordStart: function () {
         let page = this;
-        if (!page.data.isRecording) {
-            let page = this;
-            recordManager = wx.getRecorderManager();
-            let counter = recordDuration / 1000;
+        if (page.data.timeLeft <= 0) {
+            return;
+        }
+        if (page.data.isRecording) {
+            return;
+        }
+        recordManager = wx.getRecorderManager();
+        let counter = recordDuration / 1000;
+        page.setData({
+            isRecording: true,
+            countDown: '剩余' + counter + 's'
+        });
+        let interval = setInterval(function () {
+            counter -= 1;
+            if (counter === 0) {
+                clearInterval(interval);
+                page.setData({
+                    isRecording: false
+                });
+                recordManager.stop();
+                return;
+            }
             page.setData({
-                isRecording: true,
                 countDown: '剩余' + counter + 's'
             });
-            let interval = setInterval(function () {
-                counter -= 1;
-                if (counter === 0) {
-                    clearInterval(interval);
-                    page.setData({
-                        isRecording: false
-                    });
-                    recordManager.stop();
-                    return;
-                }
-                page.setData({
-                    countDown: '剩余' + counter + 's'
-                });
-            }, 1000);
-            recordManager.start({
-                format: 'mp3',
-                sampleRate: 16000,
-                numberOfChannels: 1,
-                duration: recordDuration
+        }, 1000);
+        recordManager.start({
+            format: 'mp3',
+            sampleRate: 16000,
+            numberOfChannels: 1,
+            duration: recordDuration
+        });
+        recordManager.onStop((res) => {
+            page.setData({
+                isRecording: false,
+                isProcessing: true,
+                timeLeft: page.data.timeLeft - 1
             });
-            recordManager.onStop((res) => {
-                page.setData({
-                    isRecording: false,
-                    isProcessing: true
-                });
-                clearInterval(interval);
-                let tmp = res.tempFilePath;
-                wx.uploadFile({
-                    url: page.data.api.recordUpload,
-                    filePath: tmp,
-                    name: 'file',
-                    formData: {
-                        'merchantId': page.data.merchantDetail.id,
-                        'openId': openId
-                    },
-                    success: function (res) {
-                        res = res.data;
-                        wx.showModal({
-                            title: '提示',
-                            content: JSON.stringify(res),
-                        });
-                        page.setData({
-                            winningInfo: res.data
-                        });
-                    },
-                    fail: function () {
-                        //
-                    },
-                    complete: function () {
-                        page.setData({
-                            isProcessing: false
-                        })
-                    }
-                })
+            clearInterval(interval);
+            let tmp = res.tempFilePath;
+            wx.uploadFile({
+                url: page.data.api.recordUpload,
+                filePath: tmp,
+                name: 'file',
+                formData: {
+                    'merchantId': page.data.merchantDetail.id,
+                    'openId': openId
+                },
+                success: function (res) {
+                    res = res.data;
+                    wx.showModal({
+                        title: '提示',
+                        content: JSON.stringify(res),
+                    });
+                    page.setData({
+                        winningInfo: res.data
+                    });
+                },
+                fail: function () {
+                    //
+                },
+                complete: function () {
+                    page.setData({
+                        isProcessing: false
+                    })
+                }
             })
-        }
+        });
     },
     recordStop: function () {
         this.setData({
