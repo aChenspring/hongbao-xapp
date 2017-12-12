@@ -363,12 +363,12 @@ Page({
             app.alert('请输入验证码');
             return;
         }
-        if (t !== token) {
+        if (parseInt(t) !== parseInt(token)) {
             app.alert('验证码不正确');
             return;
         }
         app.post({
-            url: '',
+            url: page.data.api.login,
             data: {
                 openId: openId,
                 phone: p

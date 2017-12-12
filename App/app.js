@@ -8,7 +8,8 @@ App({
             recordUpload: 'http://hb.shulailo.cn/index.php/home/index/voiceUpload',
             setVisitorHeadUrl: 'http://hb.shulailo.cn/index.php/Home/Index/update_info',
             getMyWins: 'http://hb.shulailo.cn/index.php/Home/Index/gift_list',
-            getToken: 'https://m1.jft365.cn/wxdfw/index.php/Login/getVerify'
+            getToken: 'https://m1.jft365.cn/wxdfw/index.php/Login/getVerify',
+            login: 'http://hb.shulailo.cn/index.php/Home/Index/bund'
         },
         img: {
             loading: '../../img/loading.svg'
