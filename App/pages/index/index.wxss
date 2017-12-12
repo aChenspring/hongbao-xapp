@@ -571,6 +571,11 @@ page {
   top: 48%;
   border: 0.5px solid red;
 }
+.s13 .inner .phone input {
+  width: 100%;
+  height: 100%;
+  font-size: 14px;
+}
 .s13 .inner .token {
   position: absolute;
   width: 36%;
@@ -579,6 +584,11 @@ page {
   top: 58.8%;
   border: 0.5px solid red;
 }
+.s13 .inner .token input {
+  width: 100%;
+  height: 100%;
+  font-size: 14px;
+}
 .s13 .inner .tokenButton {
   position: absolute;
   width: 21%;
@@ -586,6 +596,11 @@ page {
   right: 6%;
   top: 58.8%;
   border: 0.5px solid red;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #885311;
 }
 .s13 .inner .submit {
   position: absolute;

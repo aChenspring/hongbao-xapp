@@ -30,6 +30,9 @@ Page({
         showMyWins: false,
         showLogin: true,
         myWinsArr: [],
+        tokenButton: '获取验证码',
+        phone: '',
+        token: '',
         //
         headUrl: '',
         winningInfo: {
@@ -289,5 +292,20 @@ Page({
                 //
             }
         });
+    },
+    // login
+    closeLogin: function () {
+        this.setData({
+            showLogin: false
+        })
+    },
+    getToken: function () {
+
+    },
+    changePhone: function (e) {
+        //
+    },
+    changeToken: function (e) {
+
     }
 });

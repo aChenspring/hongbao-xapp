@@ -154,10 +154,14 @@
         <view class="s13">
             <view class="inner">
                 <image mode="widthFix" src="../../img/13.png" class="bg"></image>
-                <view class="close"></view>
-                <view class="phone"></view>
-                <view class="token"></view>
-                <view class="tokenButton"></view>
+                <view class="close" bindtap="closeLogin"></view>
+                <view class="phone">
+                    <input type="text" placeholder="请输入手机号" bindinput="changePhone" />
+                </view>
+                <view class="token">
+                    <input type="text" placeholder="请输入验证码" bindinput="changeToken" />
+                </view>
+                <view class="tokenButton" bindtap="getToken">{{tokenButton}}</view>
                 <view class="submit"></view>
             </view>
         </view>
