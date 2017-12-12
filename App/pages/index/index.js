@@ -28,6 +28,7 @@ Page({
         showIntro: false,
         showWinning: false,
         showMyWins: false,
+        showLogin: true,
         myWinsArr: [],
         //
         headUrl: '',

@@ -150,6 +150,18 @@
             </view>
         </view>
     </block>
+    <block wx:if="{{showLogin}}">
+        <view class="s13">
+            <view class="inner">
+                <image mode="widthFix" src="../../img/13.png" class="bg"></image>
+                <view class="close"></view>
+                <view class="phone"></view>
+                <view class="token"></view>
+                <view class="tokenButton"></view>
+                <view class="submit"></view>
+            </view>
+        </view>
+    </block>
 </block>
 <block wx:else>
     <view class="loading">
