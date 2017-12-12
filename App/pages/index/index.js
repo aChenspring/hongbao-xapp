@@ -3,6 +3,7 @@ let log = console.log.bind(console);
 let recordDuration = 15000;
 let openId;
 let recordManager;
+let token;
 
 Page({
     data: {
@@ -300,12 +301,70 @@ Page({
         })
     },
     getToken: function () {
-
+        let page = this;
+        if (page.data.phone.trim() === '') {
+            app.alert('请输入手机号');
+            return;
+        }
+        app.post({
+            url: page.data.api.getToken,
+            data: {
+                phone: page.data.phone
+            },
+            success: function (res) {
+                res = res.data;
+                if (res.code === 0) {
+                    token = res.data.token;
+                }
+                else {
+                    //
+                }
+            },
+            fail: function () {
+                //
+            }
+        });
     },
     changePhone: function (e) {
-        //
+        this.data.phone = e.detail.value
     },
     changeToken: function (e) {
-
+        this.data.token = e.detail.value;
+    },
+    submitLogin: function () {
+        let page = this;
+        let p = page.data.phone.trim();
+        let t = page.data.token.trim();
+        if (p === '') {
+            app.alert('请输入手机号');
+            return;
+        }
+        if (t === '') {
+            app.alert('请输入验证码');
+            return;
+        }
+        if (t !== token) {
+            app.alert('验证码不正确');
+            return;
+        }
+        app.post({
+            url: '',
+            data: {
+                openId: openId,
+                phone: p
+            },
+            success: function (res) {
+                res = res.data;
+                if (res.code === 0) {
+                    //
+                }
+                else {
+                    app.alert('用户不存在，请联系客服');
+                }
+            },
+            fail: function () {
+                //
+            }
+        });
     }
 });
