@@ -595,12 +595,15 @@ page {
   height: 7.8%;
   right: 6%;
   top: 58.8%;
+  border-radius: 0;
   border: 0.5px solid red;
   font-size: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #885311;
+  padding: 0;
+  background: none;
 }
 .s13 .inner .submit {
   position: absolute;

@@ -161,7 +161,7 @@
                 <view class="token">
                     <input type="text" placeholder="请输入验证码" bindinput="changeToken" />
                 </view>
-                <view class="tokenButton" bindtap="getToken">{{tokenButton}}</view>
+                <button class="tokenButton" bindtap="getToken" disabled="{{tokenButtonDisabled}}">{{tokenButton}}</button>
                 <view class="submit" bindtap="submitLogin"></view>
             </view>
         </view>

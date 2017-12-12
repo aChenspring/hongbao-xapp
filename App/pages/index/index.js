@@ -32,6 +32,7 @@ Page({
         showLogin: true,
         myWinsArr: [],
         tokenButton: '获取验证码',
+        tokenButtonDisabled: false,
         phone: '',
         token: '',
         //
@@ -306,6 +307,25 @@ Page({
             app.alert('请输入手机号');
             return;
         }
+        let counter = 10;
+        page.setData({
+            tokenButton: counter + 's后重试',
+            tokenButtonDisabled: true
+        });
+        let interval = setInterval(function () {
+            counter -= 1;
+            if (counter === 0) {
+                clearInterval(interval);
+                page.setData({
+                    tokenButton: '获取验证码',
+                    tokenButtonDisabled: false
+                });
+                return;
+            }
+            page.setData({
+                tokenButton: counter + 's后重试'
+            });
+        }, 1000);
         app.post({
             url: page.data.api.getToken,
             data: {
