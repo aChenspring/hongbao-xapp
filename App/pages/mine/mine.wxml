@@ -1,0 +1,36 @@
+<block wx:if="{{doneLoad}}">
+    <view class="s1">
+        <view class="one">
+            <image mode="widthFix" src="{{userInfo.avatarUrl}}"></image>
+        </view>
+        <view class="two">
+            <image mode="widthFix" src="../../img/21.png"></image>
+            <text>{{userInfo.nickName}}</text>
+        </view>
+    </view>
+    <view class="s2">
+        <view class="row">
+            <view class="left">
+                <image src="../../img/19.png"></image>
+            </view>
+            <view class="center">奖品列表</view>
+            <view class="right">
+                <image src="../../img/20.png"></image>
+            </view>
+        </view>
+        <view class="row">
+            <view class="left">
+                <image src="../../img/18.png"></image>
+            </view>
+            <view class="center">申请成为联盟商家</view>
+            <view class="right">
+                <image src="../../img/20.png"></image>
+            </view>
+        </view>
+    </view>
+</block>
+<block wx:else>
+    <view class="loading">
+        <image src="{{img.loading}}"></image>
+    </view>
+</block>

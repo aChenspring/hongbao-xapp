@@ -66,6 +66,7 @@ Page({
                             wx.getUserInfo({
                                 success: function (res) {
                                     res = res.userInfo;
+                                    app.appData = res;
                                     page.setData({
                                         headUrl: res.avatarUrl
                                     });

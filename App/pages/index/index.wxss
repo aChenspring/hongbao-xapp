@@ -496,6 +496,7 @@ page {
   left: 5%;
   top: 34%;
   border: 0.5px solid red;
+  overflow: scroll;
 }
 .s12 .inner .innerInner .row {
   padding: 10px;

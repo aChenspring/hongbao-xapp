@@ -17,7 +17,8 @@ App({
         header: {
             'Content-Type': 'application/x-www-form-urlencoded',
             // 'Cookie': ''
-        }
+        },
+        userInfo: {}
     },
     alert: function (content, callback) {
         // callback is optional
