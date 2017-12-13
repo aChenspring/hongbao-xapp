@@ -22,7 +22,7 @@
             <view class="left">
                 <image src="../../img/18.png"></image>
             </view>
-            <view class="center">申请成为联盟商家</view>
+            <view class="center">申请成为商家</view>
             <view class="right">
                 <image src="../../img/20.png"></image>
             </view>
