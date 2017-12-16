@@ -1,5 +1,5 @@
 <block wx:if="{{doneLoad}}">
-    
+
 </block>
 <blcok wx:else>
 
