@@ -2,6 +2,23 @@
     <view class="s1">
         <image mode="widthFix" src="../../img/24.png"></image>
     </view>
+    <view class="s2">
+        <view class="left">商家名称</view>
+        <view class="right">
+            <input type="text" placeholder="请填写商家名称"/>
+        </view>
+    </view>
+    <view class="s3">
+        <view class="left">商家LOGO</view>
+        <view class="right">
+            <image src="../../img/30.svg"></image>
+        </view>
+    </view>
+    <view class="s4"></view>
+    <view class="s5"></view>
+    <view class="s6"></view>
+    <view class="s7"></view>
+    <view class="s8"></view>
 </block>
 <blcok wx:else>
     <view class="loading">

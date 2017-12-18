@@ -1,5 +1,11 @@
-view {
+view,
+input,
+image,
+button {
   box-sizing: border-box;
+}
+image {
+  display: block;
 }
 page {
   background-color: #fff6d0;
