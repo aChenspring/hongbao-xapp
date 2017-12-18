@@ -1,0 +1,4 @@
+.s1 image {
+  width: 100%;
+  display: block;
+}

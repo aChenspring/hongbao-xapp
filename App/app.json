@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/signup/signup",
     "pages/mine/mine",
     "pages/index/index"
   ]

@@ -1,6 +1,10 @@
 <block wx:if="{{doneLoad}}">
-
+    <view class="s1">
+        <image mode="widthFix" src="../../img/24.png"></image>
+    </view>
 </block>
 <blcok wx:else>
-
+    <view class="loading">
+        <image src="{{img.loading}}"></image>
+    </view>
 </blcok>

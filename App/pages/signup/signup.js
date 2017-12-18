@@ -5,7 +5,7 @@ Page({
     data: {
         api: app.appData.api,
         img: app.appData.img,
-        doneLoad: false,
+        doneLoad: true,
     },
     onLoad: function () {
         //
