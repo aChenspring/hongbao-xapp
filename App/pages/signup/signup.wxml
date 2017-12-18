@@ -14,7 +14,15 @@
             <image src="../../img/30.svg"></image>
         </view>
     </view>
-    <view class="s4"></view>
+    <view class="s4">
+        <view class="left">商家类型</view>
+        <view class="right">
+            <picker bindchange="changeMerchantType"
+                    range="{{merchantTypeArr}}">
+                <view>{{merchantTypeValue}}</view>
+            </picker>
+        </view>
+    </view>
     <view class="s5"></view>
     <view class="s6"></view>
     <view class="s7"></view>
