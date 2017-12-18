@@ -96,3 +96,21 @@ page {
   border: 0.5px solid red;
   text-align: right;
 }
+.s5 {
+  padding: 10px 15px;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #EDEDEF;
+}
+.s5 .left {
+  line-height: 30px;
+  font-size: 15px;
+}
+.s5 .right {
+  width: 60%;
+  line-height: 30px;
+  font-size: 15px;
+  border: 0.5px solid red;
+  text-align: right;
+}

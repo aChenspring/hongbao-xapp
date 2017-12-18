@@ -23,7 +23,10 @@
             </picker>
         </view>
     </view>
-    <view class="s5"></view>
+    <view class="s5">
+        <view class="left">当前余额</view>
+        <view class="right">0元</view>
+    </view>
     <view class="s6"></view>
     <view class="s7"></view>
     <view class="s8"></view>
