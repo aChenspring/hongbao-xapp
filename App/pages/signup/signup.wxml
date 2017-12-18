@@ -38,7 +38,12 @@
             </block>
         </view>
     </view>
-    <view class="s7"></view>
+    <view class="s7">
+        <div class="item">10元</div>
+        <div class="item">20元</div>
+        <div class="item">30元</div>
+        <div class="item">50元</div>
+    </view>
     <view class="s8"></view>
 </block>
 <blcok wx:else>

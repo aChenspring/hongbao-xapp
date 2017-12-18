@@ -134,3 +134,18 @@ page {
   float: right;
   border: 0.5px solid red;
 }
+.s7 {
+  padding: 10px 15px;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #EDEDEF;
+}
+.s7 .item {
+  height: 30px;
+  line-height: 30px;
+  border: 1px solid #E0E0E0;
+  padding: 0 10px;
+  font-size: 14px;
+  border-radius: 2px;
+}
