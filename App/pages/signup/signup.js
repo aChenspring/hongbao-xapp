@@ -7,7 +7,8 @@ Page({
         img: app.appData.img,
         doneLoad: true,
         merchantTypeArr: ['山海通', '微商'],
-        merchantTypeValue: '山海通'
+        merchantTypeValue: '山海通',
+        switchIconSelected: false
     },
     onLoad: function () {
         //

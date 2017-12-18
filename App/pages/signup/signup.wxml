@@ -27,7 +27,17 @@
         <view class="left">当前余额</view>
         <view class="right">0元</view>
     </view>
-    <view class="s6"></view>
+    <view class="s6">
+        <view class="left">是否充值</view>
+        <view class="right">
+            <block wx:if="{{switchIconSelected === false}}">
+                <image mode="" src="../../img/23.png"></image>
+            </block>
+            <block wx:else>
+                <image mode="" src="../../img/29.png"></image>
+            </block>
+        </view>
+    </view>
     <view class="s7"></view>
     <view class="s8"></view>
 </block>

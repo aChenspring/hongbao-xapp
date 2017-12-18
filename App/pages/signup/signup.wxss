@@ -114,3 +114,23 @@ page {
   border: 0.5px solid red;
   text-align: right;
 }
+.s6 {
+  padding: 10px 15px;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #EDEDEF;
+}
+.s6 .left {
+  line-height: 30px;
+  font-size: 15px;
+}
+.s6 .right {
+  width: 60%;
+}
+.s6 .right image {
+  width: 47px;
+  height: 30px;
+  float: right;
+  border: 0.5px solid red;
+}
