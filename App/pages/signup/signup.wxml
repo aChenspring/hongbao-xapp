@@ -44,7 +44,9 @@
         <div class="item">30元</div>
         <div class="item">50元</div>
     </view>
-    <view class="s8"></view>
+    <view class="s8">
+        <button>确认充值</button>
+    </view>
 </block>
 <blcok wx:else>
     <view class="loading">

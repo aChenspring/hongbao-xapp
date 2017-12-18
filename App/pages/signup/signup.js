@@ -6,8 +6,8 @@ Page({
         api: app.appData.api,
         img: app.appData.img,
         doneLoad: true,
-        merchantTypeArr: ['山海通', '微商'],
-        merchantTypeValue: '山海通',
+        merchantTypeArr: ['口令红包模式', '联盟商家模式','非联盟商家模式'],
+        merchantTypeValue: '口令红包模式',
         switchIconSelected: false
     },
     onLoad: function () {
